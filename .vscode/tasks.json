@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "verify",
+            "type": "shell",
+            "command": "make build",
+            "isBackground": true
+        },
+        {
+            "label": "install",
+            "type": "shell",
+            "command": "make flash",
+            "presentation": {
+                "reveal": "always",
+            }
+        },
+        {
+            "label": "Run Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/venv/bin/python server/server.py --device-port /dev/cu.usbmodem14201",
+            "isBackground": true
+        },
+        {
+            "label": "Toggle On",
+            "type": "shell",
+            "command": "curl http://localhost:5000/set -XPOST -dON"
+        },
+        {
+            "label": "Toggle OFF",
+            "type": "shell",
+            "command": "curl http://localhost:5000/set -XPOST -dOFF"
+        }
+    ]
+}

@@ -13,3 +13,9 @@ core:
 
 %.alib:
 	$(ARDCLI) lib install $(@:%.alib=%)
+
+venv:
+	python3 -m virtualenv venv
+
+requirements: venv
+	./venv/bin/pip install -r requirements.txt

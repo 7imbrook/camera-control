@@ -1,0 +1,8 @@
+{
+  "binary": "/Users/timbrook/Projects/camera-control/venv/bin/pyre.bin",
+  "source_directories": [
+    "."
+  ],
+  "taint_models_path": "/Users/timbrook/Projects/camera-control/venv/lib",
+  "typeshed": "/Users/timbrook/Projects/camera-control/venv/lib/pyre_check/typeshed"
+}

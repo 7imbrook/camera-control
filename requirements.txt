@@ -1,0 +1,4 @@
+pyserial==3.5
+Flask==1.1.2
+click==7.1.2
+pyre-check==0.0.58
